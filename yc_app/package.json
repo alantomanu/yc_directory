@@ -2,6 +2,7 @@
   "name": "yc_app",
   "version": "0.1.0",
   "private": true,
+  "description": "Package configuration ensures same version of React is used across all directories",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -11,24 +12,23 @@
   "packageManager": "npm@10.5.2",
   "overrides": {
     "react": "$react",
-    "react-dom": "$react-dom",
-    "_comment": "this is done to ensure same vesion f react is is used across all dierectory"
-   
+    "react-dom": "$react-dom"
   },
   "dependencies": {
+    "next": "15.1.3",
+    "next-auth": "^5.0.0-beta.25",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.1.3"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^9",
     "eslint-config-next": "15.1.3",
-    "@eslint/eslintrc": "^3"
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
