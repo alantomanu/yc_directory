@@ -1,8 +1,8 @@
 import React from 'react'
 import SearchFormReset from './searchFormReset';
 
-const SearchForm = () => {
-    const query = "test";
+const SearchForm = ({query}:{query:string}) => {
+  
    
   return (
     <div>
