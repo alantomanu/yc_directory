@@ -7,7 +7,7 @@ export default function Home() {
     Pitch your Startups <br />
     connect with enterprenures
    </h1>
-<p className="subheading !max-w-3xl">
+<p className="subheading !max-w-3xl text-white">
   Submit Ideas, Vote on Pitches,and Get Noticed in virtual competitions
 </p>
 <SearchForm />
