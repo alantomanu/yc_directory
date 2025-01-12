@@ -1,25 +1,22 @@
+"use client";
 
-"use client"
+import { X } from 'lucide-react';
 
-import Link from "next/link";
-import {X} from 'lucide-react';
-const searchFormReset = () => {
-    const reset = () => {
-        const form = document.querySelector(".search-form") as HTMLFormElement;
-        if(form){
-            form.reset();
-        }
+const SearchFormReset = () => {
+  const reset = () => {
+    const form = document.querySelector<HTMLFormElement>(".search-form");
+    if (form) {
+      form.reset();
     }
-  return (
-    <div>
-       <button type="submit" onClick={reset}>
-                   <Link href="/" className="search-btn text-white">
-                   <X className="size-5"/>
-                   </Link>
-                   </button>
-                   
-    </div>
-  )
-}
+    // Use `location` to reset the query parameter in the URL
+    window.location.href = "/";
+  };
 
-export default searchFormReset
+  return (
+    <button type="button" onClick={reset} className="search-btn text-white">
+      <X className="size-5" />
+    </button>
+  );
+};
+
+export default SearchFormReset;
