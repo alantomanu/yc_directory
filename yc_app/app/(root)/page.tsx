@@ -6,8 +6,17 @@ export default async function Home({
 }: {
   searchParams: { query?: string };
 }) {
-  const query = searchParams?.query || ""; // Safely access the query parameter
-  
+  const query = searchParams?.query ; // Safely access the query parameter
+  const posts=[{
+    _createdAt:new Date(),
+    views:55,
+    author:{_id:1,name:'Alanto'},
+    _id:1,
+    description:'this is a image',
+    image:'https://t4.ftcdn.net/jpg/02/10/96/95/240_F_210969565_cIHkcrIzRpWNZzq8eaQnYotG4pkHh0P9.jpg',
+    category:'Robots',
+    title:'we Robots'
+  }]
   return (
     <>
       <section className="pink_container pattern">
