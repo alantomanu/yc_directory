@@ -2,6 +2,7 @@ import { format } from 'date-fns';
 import { EyeIcon } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Button } from './ui/button';
 
 const formatDate = (date: string | Date) => format(new Date(date), 'yyyy-MM-dd'); // Consistent format
 
@@ -37,7 +38,7 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
         </Link>
       </div>
       <Link href={`/startup/${_id}`}>
-        <p className="startup-card_description">{description}</p>
+        <p className="startup-card_desc">{description}</p>
         <Image
           src={image }
           alt="Startup"
@@ -46,6 +47,16 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
           className="startup-card_img"
         />
       </Link>
+      <div className="flex-between mt-5 gap-5">
+        <Link href={`/?query=${category.toLowerCase()}`} >
+        <p className='text-16-medium'>{category}</p>
+        </Link>
+        <Button className='startup-card_btn' asChild>
+          <Link href={`/startup/${_id}`}>
+            Details
+          </Link>
+        </Button>
+      </div>
     </li>
   );
 };
