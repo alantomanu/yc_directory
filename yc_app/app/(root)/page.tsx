@@ -8,7 +8,7 @@ export default async function Home({
 }) {
   const query = searchParams?.query ; // Safely access the query parameter
   const posts=[{
-    _createdAt:new Date(),
+    _createdAt: '2024-03-20T12:00:00Z',
     views:55,
     author:{_id:1,name:'Alanto'},
     _id:1,
