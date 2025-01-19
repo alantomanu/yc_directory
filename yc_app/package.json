@@ -4,18 +4,19 @@
   "private": true,
   "description": "Package configuration ensures same version of React is used across all directories",
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev ",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "packageManager": "npm@10.5.2",
   "overrides": {
-    "react": "$react",
-    "react-dom": "$react-dom"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
+    "@sanity/vision": "^3.70.0",
     "@tailwindcss/typography": "^0.5.10",
     "base": "^3.0.0",
     "class-variance-authority": "^0.7.1",
@@ -25,8 +26,10 @@
     "lucide-react": "^0.469.0",
     "next": "15.1.3",
     "next-auth": "^5.0.0-beta.25",
+    "next-sanity": "^9.8.38",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "sanity": "^3.70.0",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "utilities": "^1.0.6"
